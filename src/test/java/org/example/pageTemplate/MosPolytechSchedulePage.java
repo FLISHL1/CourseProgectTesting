@@ -22,6 +22,9 @@ public class MosPolytechSchedulePage {
     @FindBy(xpath = "/html/body/div/div[1]/div[2]")
     private WebElement groupsList;
 
+    @FindBy(xpath = "//div[starts-with(@class,'schedule-day')]")
+    private List<WebElement> weekDays;
+
     public MosPolytechSchedulePage(WebDriver driver){
         PageFactory.initElements(driver, this);
         this.driver = driver;
@@ -41,5 +44,9 @@ public class MosPolytechSchedulePage {
 
     public void clickGroup(String group){
         groupsList.findElements(By.tagName("div")).get(0).click();
+    }
+
+    public boolean checkSelectedWeekDay(int weekDay){
+        return weekDays.get(weekDay).getAttribute("class").contains("schedule-day_today");
     }
 }

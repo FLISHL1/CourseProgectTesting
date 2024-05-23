@@ -14,6 +14,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
+import java.time.LocalDate;
+import java.util.Date;
+
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
@@ -52,5 +55,17 @@ public class MosPolytechTest extends DriverSetup {
 
         mosPolytechSchedulePage.clickGroup("221-361");
         logger.info("Group selected");
+
+        int numDay = getDayWeekNumber();
+        if (numDay == 7){
+            logger.info("The day is not chosen because it is Sunday");
+        }else {
+            assertTrue(mosPolytechSchedulePage.checkSelectedWeekDay(numDay));
+            logger.info("Check selected week day");
+        }
+    }
+
+    private int getDayWeekNumber(){
+        return LocalDate.now().getDayOfWeek().getValue();
     }
 }

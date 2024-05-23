@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae791595-5175-41ff-acda-0c0e07d914e4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/conf.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/ReqresPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/ReqresTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/MosPolytechSchedulePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/MosPolytechSchedulePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/MosPolytechTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/MosPolytechTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/YandexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/YandexTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/conf.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/conf.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +45,10 @@
     &quot;JUnit.LambdaTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.LambdaTest.test.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.MosPolytechTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReqresTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReqresTest.test2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReqresTest.test3.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReqresTest.test5.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.YandexTest.executor&quot;: &quot;Run&quot;,
     &quot;Maven.CourseProgectTesting [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.CourseProgectTesting [io.qameta.allure:allure-maven:2.9:serve].executor&quot;: &quot;Run&quot;,
@@ -76,51 +81,7 @@
       <recent name="org.example.tests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.YandexTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="CourseProgectTesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.Custom" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LambdaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CourseProgectTesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.Custom" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.LambdaTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LambdaTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CourseProgectTesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.Custom" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.LambdaTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.MosPolytechTest">
     <configuration name="MosPolytechTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CourseProgectTesting" />
       <extension name="coverage">
@@ -136,7 +97,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="YandexTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReqresTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CourseProgectTesting" />
       <extension name="coverage">
         <pattern>
@@ -145,26 +106,74 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.YandexTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReqresTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CourseProgectTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresTest" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReqresTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CourseProgectTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresTest" />
+      <option name="METHOD_NAME" value="test3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReqresTest.test5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CourseProgectTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresTest" />
+      <option name="METHOD_NAME" value="test5" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.YandexTest" />
         <item itemvalue="JUnit.MosPolytechTest" />
-        <item itemvalue="JUnit.LambdaTest.test" />
-        <item itemvalue="JUnit.LambdaTest" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ReqresTest.test5" />
+        <item itemvalue="JUnit.ReqresTest" />
+        <item itemvalue="JUnit.ReqresTest.test2" />
+        <item itemvalue="JUnit.ReqresTest.test3" />
       </list>
     </recent_temporary>
   </component>
   <component name="SeleniumInternalSettingsState">
     <option name="lastFrameworkName" value="FluentLenium" />
     <option name="lastLanguageId" value="JAVA" />
-    <option name="lastUrl" value="https://market.yandex.ru/catalog--vnutrennie-zhestkie-diski/18072776/list?hid=91033&amp;rs=eJx9UD9o1GAczVeLpumSsc1R-NwOl8uXu-QSWyF0KrrU7pL7LuboQWzP5m5yMNIqQqmTU3WI4FBoBR26-AfjoEPX0qE4GKviqJQWcTO_R6lOLo_He7_3e7_vs9bOzLL3TOGdSyXmc5Ml-t-mSDl4Rbh7scTiAZSf5BbPSPdvE-fvSFfuE6aV16TMIvWdlNZz4ulL4sUFuA-h7BFPrxDmV6mXn8f-FXLzD8T9bWDPKzH7Df6CMDvCDbfeEv9KLhfQr2HDJjbP0M7WL9w2QtxfJsymyM0YcaWGO1dpW-seTebHuHMXe_DG7BF68QPpFvR9zHykVP4FKQ594g3NTGN-CI2jaH-C-XH8zydqL1KkfPzGD2op4skdprYd2xXS86YPmVbRVJXpfGyYD-tnjZHrUUcO4n5gcaWqnJoa1_416zDHYbIxxpk-ZJw7MWEJWKOwdKMSymQg4yCUS4uDJIqDetDtRzeSoL_Y40d3jOrnfVOrI6KiSjcm2jLphn8TvVh2F4IkkkvhfHnb4w2tene9c9Kj4viy5z8h_nSDV7ePb-rs8unz5yzRFLbdEA1RF45Va4eWbdl2O5KuK9xO0zOdyG16YcMRrumYZk3UxB_TV9ff" />
+    <option name="lastUrl" value="https://reqres.in/" />
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -189,7 +198,9 @@
       <workItem from="1715517648651" duration="7000" />
       <workItem from="1715517668406" duration="10129000" />
       <workItem from="1715527961992" duration="15467000" />
-      <workItem from="1715544907400" duration="5876000" />
+      <workItem from="1715544907400" duration="6165000" />
+      <workItem from="1715553744331" duration="3697000" />
+      <workItem from="1716450383969" duration="943000" />
     </task>
     <servers />
   </component>
