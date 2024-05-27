@@ -13,6 +13,13 @@ import java.time.Duration;
 
 
 public abstract class DriverSetup {
+    /*
+    Для корректной работы тестов необходимо создать новый профиль в Google Chrome
+    Авторизироваться в Яндексе и Онлайн трейде
+    По ссылке chrome://version найти путь к профилю
+    Примечание: не должно быть запущенно ни одного процесса связанного с chrome в диспетчере задач
+
+     */
     private static Logger logger = LoggerFactory.getLogger(DriverSetup.class);
 
     public static WebDriver driver;
@@ -20,8 +27,10 @@ public abstract class DriverSetup {
     public void setup() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--user-data-dir=" + System.getProperties().get("user.dir") + "/Profiles");
-        options.addArguments("--profile-directory=Profile2");
+//        Указать путь к папке с профилем <вставить свой по примеру>
+        options.addArguments("--user-data-dir=C:\\Users\\Кирилл\\AppData\\Local\\Google\\Chrome\\User Data");
+//        И указать название профиля (конечную папку) по ссылке chrome://version
+        options.addArguments("--profile-directory=Profile 2");
 //        options.addArguments("headless");
         driver = new EventFiringDecorator(new CustomEvent()).decorate(new ChromeDriver(options));
 

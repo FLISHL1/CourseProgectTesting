@@ -40,6 +40,8 @@ public class TestListener implements TestWatcher {
         }
 
 //        driver.quit();
+//        Runtime.getRuntime().exec("taskkill /F /IM ChromeDriver.exe");
+
     }
 
 //    @SneakyThrows
