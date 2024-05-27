@@ -20,6 +20,8 @@ public abstract class DriverSetup {
     public void setup() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--user-data-dir=" + System.getProperties().get("user.dir") + "/Profiles");
+        options.addArguments("--profile-directory=Profile2");
 //        options.addArguments("headless");
         driver = new EventFiringDecorator(new CustomEvent()).decorate(new ChromeDriver(options));
 
