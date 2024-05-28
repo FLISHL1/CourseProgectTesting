@@ -15,7 +15,6 @@ import org.slf4j.LoggerFactory;
 
 
 import java.time.LocalDate;
-import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -47,6 +46,8 @@ public class MosPolytechTest extends DriverSetup {
         logger.info("Click button schedule group");
 
         mosPolytechSchedulePage = new MosPolytechSchedulePage(driver);
+        driver.manage().deleteCookieNamed("group");
+        driver.navigate().refresh();
         mosPolytechSchedulePage.inputGroup("221-361");
         logger.info("Input group");
 

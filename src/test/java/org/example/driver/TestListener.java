@@ -39,7 +39,7 @@ public class TestListener implements TestWatcher {
             throw new RuntimeException(e);
         }
 
-//        driver.quit();
+        driver.quit();
 //        Runtime.getRuntime().exec("taskkill /F /IM ChromeDriver.exe");
 
     }
@@ -52,6 +52,6 @@ public class TestListener implements TestWatcher {
         Allure.addAttachment("Логи после успешного прохождения теста: ",String.valueOf(driver.manage().logs().get(LogType.BROWSER).getAll()));
         WebDriverManager.chromedriver().quit();
         logger.info("Test success");
-//        driver.quit();
+        driver.quit();
     }
 }

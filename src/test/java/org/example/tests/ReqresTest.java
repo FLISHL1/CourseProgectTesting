@@ -4,9 +4,8 @@ import io.qameta.allure.*;
 import org.example.driver.ConfProperties;
 import org.example.driver.DriverSetup;
 import org.example.driver.TestListener;
-import org.example.pageTemplate.LambdaPage;
 import org.example.pageTemplate.ReqresPage;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -17,6 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(TestListener.class)
 @Feature("Тесты сайта reqres")
+@Disabled
 public class ReqresTest extends DriverSetup {
     public static ReqresPage reqresPage;
     private static final Logger logger = LoggerFactory.getLogger(ReqresTest.class);

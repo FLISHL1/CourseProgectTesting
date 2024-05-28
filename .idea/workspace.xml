@@ -5,68 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae791595-5175-41ff-acda-0c0e07d914e4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/bin/allure" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/bin/allure.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/config/allure-cucumber.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/config/allure-junit.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/config/allure.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/allure-commandline-2.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/allure-generator-2.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/allure-plugin-api-2.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/allure1-model-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/allure2-model-api-1.0-BETA4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/allure2-model-jackson-1.0-BETA4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/allure2-model-pojo-1.0-BETA4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/asm-5.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/asm-analysis-5.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/asm-tree-5.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/asm-util-5.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/commons-io-2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/config/jetty-logging.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/config/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/freemarker-2.3.23.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/jackson-annotations-2.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/jackson-core-2.8.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/jackson-databind-2.8.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/jackson-dataformat-yaml-2.8.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/jackson-module-jaxb-annotations-2.8.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/javax.servlet-api-3.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/jaxb-utils-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/jcommander-1.64.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/jetty-http-9.2.2.v20140723.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/jetty-io-9.2.2.v20140723.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/jetty-server-9.2.2.v20140723.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/jetty-util-9.2.2.v20140723.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/log4j-1.2.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/parboiled-core-1.1.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/parboiled-java-1.1.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/pegdown-1.6.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/properties-2.0.RC5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/slf4j-api-1.7.21.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/slf4j-log4j12-1.7.21.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/snakeyaml-1.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/lib/tika-core-1.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/behaviors-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/behaviors-plugin/plugin.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/behaviors-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/custom-logo-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/custom-logo-plugin/static/custom-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/custom-logo-plugin/static/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/junit-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/junit-plugin/junit-plugin-2.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/junit-plugin/lib/doxia-sink-api-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/junit-plugin/lib/maven-reporting-api-3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/junit-plugin/lib/surefire-report-parser-2.19.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/packages-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/packages-plugin/plugin.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/packages-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/screen-diff-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/screen-diff-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.allure/allure-2.0.1/plugins/screen-diff-plugin/static/styles.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/driver/DriverSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/driver/DriverSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/driver/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/driver/TestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/LambdaPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/LambdaPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/MosPolytechPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/MosPolytechPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/MosPolytechSchedulePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/MosPolytechSchedulePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/OnlineTradePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/OnlineTradePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/YandexMarketPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/YandexMarketPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/MosPolytechTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/MosPolytechTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/OnlineTradeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/OnlineTradeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/ReqresTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/ReqresTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/YandexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/YandexTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,42 +62,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.LambdaTest.executor": "Run",
-    "JUnit.LambdaTest.test.executor": "Run",
-    "JUnit.MosPolytechTest.executor": "Run",
-    "JUnit.OnlineTradeTest.executor": "Run",
-    "JUnit.OnlineTradeTest.test.executor": "Run",
-    "JUnit.ReqresTest.executor": "Run",
-    "JUnit.ReqresTest.test1.executor": "Run",
-    "JUnit.ReqresTest.test2.executor": "Run",
-    "JUnit.ReqresTest.test3.executor": "Run",
-    "JUnit.ReqresTest.test5.executor": "Run",
-    "JUnit.YandexTest.executor": "Run",
-    "Maven.CourseProgectTesting [clean].executor": "Run",
-    "Maven.CourseProgectTesting [io.qameta.allure:allure-maven:2.9:serve].executor": "Run",
-    "Maven.CourseProgectTesting [org.apache.maven.plugins:maven-surefire-plugin:3.2.3:test].executor": "Run",
-    "Maven.CourseProgectTesting [verify].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/konop/Desktop/Университет/4 семестр/Курсач/CourseProgectTesting",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/Кирилл/Desktop/Университет/4 семестр/Курсач/CourseProgectTest/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.39313984",
-    "settings.editor.selected.configurable": "web.inspector.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.LambdaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LambdaTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MosPolytechTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OnlineTradeTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OnlineTradeTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OnlineTradeTest.test3.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReqresTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReqresTest.test1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReqresTest.test2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReqresTest.test3.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReqresTest.test5.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.YandexTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.CourseProgectTesting [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.CourseProgectTesting [io.qameta.allure:allure-maven:2.9:serve].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.CourseProgectTesting [org.apache.maven.plugins:maven-surefire-plugin:3.2.3:test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.CourseProgectTesting [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/konop/Desktop/Университет/4 семестр/Курсач/CourseProgectTesting&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Кирилл/Desktop/Университет/4 семестр/Курсач/CourseProgectTest/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.39313984&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.example" />
@@ -155,7 +108,7 @@
       <recent name="org.example.pageTemplate" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OnlineTradeTest.test">
+  <component name="RunManager" selected="JUnit.OnlineTradeTest">
     <configuration name="LambdaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CourseProgectTesting" />
       <extension name="coverage">
@@ -166,6 +119,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example.tests" />
       <option name="MAIN_CLASS_NAME" value="org.example.tests.LambdaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MosPolytechTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CourseProgectTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.MosPolytechTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -202,7 +170,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReqresTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OnlineTradeTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CourseProgectTesting" />
       <extension name="coverage">
         <pattern>
@@ -211,24 +179,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresTest" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReqresTest.test5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CourseProgectTesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresTest" />
-      <option name="METHOD_NAME" value="test5" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.OnlineTradeTest" />
+      <option name="METHOD_NAME" value="test3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -236,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OnlineTradeTest.test3" />
+        <item itemvalue="JUnit.OnlineTradeTest" />
+        <item itemvalue="JUnit.MosPolytechTest" />
         <item itemvalue="JUnit.OnlineTradeTest.test" />
         <item itemvalue="JUnit.LambdaTest" />
-        <item itemvalue="JUnit.OnlineTradeTest" />
-        <item itemvalue="JUnit.ReqresTest.test1" />
-        <item itemvalue="JUnit.ReqresTest.test5" />
       </list>
     </recent_temporary>
   </component>
@@ -280,22 +232,14 @@
       <workItem from="1716554491633" duration="1281000" />
       <workItem from="1716653035560" duration="8139000" />
       <workItem from="1716809368674" duration="3371000" />
+      <workItem from="1716843087664" duration="6336000" />
+      <workItem from="1716881915147" duration="90000" />
+      <workItem from="1716882021611" duration="312000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

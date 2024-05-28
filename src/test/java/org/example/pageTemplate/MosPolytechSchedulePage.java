@@ -19,7 +19,7 @@ public class MosPolytechSchedulePage {
     private WebElement inputGroups;
 
 
-    @FindBy(xpath = "/html/body/div/div[1]/div[2]")
+    @FindBy(xpath = "//div[contains(@class, 'found-groups')]")
     private WebElement groupsList;
 
     @FindBy(xpath = "//div[starts-with(@class,'schedule-day')]")
@@ -30,6 +30,10 @@ public class MosPolytechSchedulePage {
         this.driver = driver;
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
         wait.until(visibilityOfElementLocated(By.xpath("//input[@class='groups']")));
+    }
+
+    public void clearInputGroup(){
+        inputGroups.clear();
     }
 
     public void inputGroup(String group){
@@ -47,6 +51,6 @@ public class MosPolytechSchedulePage {
     }
 
     public boolean checkSelectedWeekDay(int weekDay){
-        return weekDays.get(weekDay).getAttribute("class").contains("schedule-day_today");
+        return weekDays.get(weekDay-1).getAttribute("class").contains("schedule-day_today");
     }
 }

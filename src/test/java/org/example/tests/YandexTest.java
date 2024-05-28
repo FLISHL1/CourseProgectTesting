@@ -12,7 +12,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -66,7 +65,7 @@ public class YandexTest extends DriverSetup {
     }
 
     @Step("Переход к катологу")
-    private void transitionToCatologist(){
+    private void stepTransitionToCatologist(){
         yandexMarketPage.clickCatalog();
         logger.info("Pressed catalog");
 
@@ -86,7 +85,7 @@ public class YandexTest extends DriverSetup {
     @Epic("Test for site https://market.yandex.ru ")
     public void test(){
         init();
-        transitionToCatologist();
+        stepTransitionToCatologist();
         stepLogProduct();
         stepSortList();
     }

@@ -18,7 +18,7 @@ public class LambdaPage {
 
 
 
-    @FindBy(xpath="/html/body/div/div/div/span")
+    @FindBy(xpath="//span[@class='ng-binding']")
     private WebElement labelRemaining;
 
     @FindBy(xpath = "//ul")

@@ -31,7 +31,7 @@ public class OnlineTradePage {
     private WebElement elektronikaButton;
 
 
-    @FindBy(xpath = "/html/body/div[1]/div/div[3]/div[1]/div/div/div/div[2]/ul/li[1]/div/div[1]/div[1]/div/div[1]/ul/li[1]/a")
+    @FindBy(xpath = "//a[text()='Смартфоны']")
 //    @FindBy(xpath = "//a[contains(@href, 'smartfony')]")
     private WebElement smartfonyButton;
 
@@ -46,6 +46,15 @@ public class OnlineTradePage {
 
     @FindBy(xpath = "//input[@class='header__search__inputGogogo']")
     private WebElement searchButton;
+
+    @FindBy(xpath = "//select[@id='js__listingSort_ID']//child::option[@value='price-asc']")
+    private WebElement sortButton;
+
+
+    public void clickSortButton(){
+        sortButton.click();
+    }
+
 
 
     public void clickCatalogButton() {
@@ -79,6 +88,12 @@ public class OnlineTradePage {
         result.append(" ");
         result.append(cardProduct.findElement(By.xpath(".//span[starts-with(@class,'price')]")).getText());
         return result.toString();
+    }
+
+    public List<Integer> getPriceProducts(int num) {
+        By xpath = By.xpath(".//span[starts-with(@class,'price')]");
+        List<WebElement> priceString = cardsProduct.stream().map(i -> i.findElement(xpath)).toList();
+        return priceString.stream().map(WebElement::getText).map(e -> e.replaceAll("\\D", "")).map(Integer::parseInt).toList().subList(0, num-1);
     }
 
     public void inputSearch(String searchText) {
