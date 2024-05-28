@@ -1,6 +1,7 @@
 package org.example.pageTemplate;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -23,10 +24,10 @@ public class YandexMarketPage {
 //
     @FindBy(xpath = "//div[@data-baobab-name='catalog']/button")
     private WebElement buttonCatalog;
-    @FindBy(xpath = "//li[@data-zone-data='{\"id\":\"97009164\"}']")
+    @FindBy(xpath = "//li[@data-zone-name='category-link' and child::a[contains(@href,'/catalog--kompiuternaia-tekhnika/')]]")
     private WebElement catalogElementComputer;
 
-    @FindBy(xpath = "//div[@data-node-id='f4qz3az']/a")
+    @FindBy(xpath = "//div[contains(@data-zone-data, '/catalog--vnutrennie-zhestkie-diski/')]/a")
     private WebElement catalogElementDisk;
 
 
@@ -68,10 +69,14 @@ public class YandexMarketPage {
         sortButton.click();
         try {
             TimeUnit.SECONDS.sleep(3);
+            Actions action = new Actions(driver);
+            action.moveToElement(
+            driver.findElement(By.xpath("//button[@data-auto='pager-more']"))).build().perform();
+            TimeUnit.SECONDS.sleep(5);
+
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     public List<Integer> getProductPriceListFirst(Integer count){

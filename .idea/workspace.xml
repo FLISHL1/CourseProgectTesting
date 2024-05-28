@@ -6,19 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ae791595-5175-41ff-acda-0c0e07d914e4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/driver/DriverSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/driver/DriverSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/driver/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/driver/TestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/LambdaPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/LambdaPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/MosPolytechPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/MosPolytechPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/MosPolytechSchedulePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/MosPolytechSchedulePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/OnlineTradePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/OnlineTradePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/YandexMarketPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/YandexMarketPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/MosPolytechTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/MosPolytechTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/OnlineTradeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/OnlineTradeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/ReqresTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/ReqresTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/YandexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/YandexTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,22 +97,7 @@
       <recent name="org.example.pageTemplate" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OnlineTradeTest">
-    <configuration name="LambdaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CourseProgectTesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.LambdaTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.YandexTest">
     <configuration name="MosPolytechTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CourseProgectTesting" />
       <extension name="coverage">
@@ -186,13 +160,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="YandexTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CourseProgectTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.YandexTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.YandexTest" />
         <item itemvalue="JUnit.OnlineTradeTest.test3" />
         <item itemvalue="JUnit.OnlineTradeTest" />
         <item itemvalue="JUnit.MosPolytechTest" />
         <item itemvalue="JUnit.OnlineTradeTest.test" />
-        <item itemvalue="JUnit.LambdaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -234,7 +223,7 @@
       <workItem from="1716809368674" duration="3371000" />
       <workItem from="1716843087664" duration="6336000" />
       <workItem from="1716881915147" duration="90000" />
-      <workItem from="1716882021611" duration="312000" />
+      <workItem from="1716882021611" duration="5251000" />
     </task>
     <servers />
   </component>
