@@ -33,7 +33,6 @@ public class TestListener implements TestWatcher {
             File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             DateTimeFormatter format = DateTimeFormatter.ofPattern("uuuu-MMM-dd-HH-mm-ss");
             String pathName = "testFailed-(" + context.getDisplayName().replaceAll(" ", "-").replaceAll("[\\/\\?]", "_") + ")-" + LocalDateTime.now().format(format) + ".png";
-            System.out.println(pathName);
             FileUtils.copyFile(srcFile, new File(pathName));
         } catch (IOException e) {
             throw new RuntimeException(e);

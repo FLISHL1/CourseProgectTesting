@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae791595-5175-41ff-acda-0c0e07d914e4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/models/ColorData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/models/ColorFromPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/models/People.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/models/PeopleCreate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/models/PeopleUpdate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/models/UserFromPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/models/UserLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/models/UserRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/ReqresBackEndTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/driver/DriverSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/driver/DriverSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/driver/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/driver/TestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/ReqresPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pageTemplate/ReqresPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/ReqresTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/ReqresTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +69,16 @@
     "JUnit.OnlineTradeTest.executor": "Run",
     "JUnit.OnlineTradeTest.test.executor": "Run",
     "JUnit.OnlineTradeTest.test3.executor": "Run",
+    "JUnit.ReqresBackEndTest.delay.executor": "Run",
+    "JUnit.ReqresBackEndTest.executor": "Run",
+    "JUnit.ReqresBackEndTest.test1.executor": "Run",
+    "JUnit.ReqresBackEndTest.test2.executor": "Run",
+    "JUnit.ReqresBackEndTest.unknown.executor": "Run",
+    "JUnit.ReqresBackEndTest.unknownGet.executor": "Run",
+    "JUnit.ReqresBackEndTest.unknownGetFail.executor": "Run",
+    "JUnit.ReqresBackEndTest.userFromPage.executor": "Run",
+    "JUnit.ReqresBackEndTest.userGet.executor": "Run",
+    "JUnit.ReqresBackEndTest.userGetFail.executor": "Run",
     "JUnit.ReqresTest.executor": "Run",
     "JUnit.ReqresTest.test1.executor": "Run",
     "JUnit.ReqresTest.test2.executor": "Run",
@@ -107,8 +125,8 @@
       <command value="mvn clean verify" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ReqresTest.test9">
-    <configuration name="OnlineTradeTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ReqresBackEndTest.delay">
+    <configuration name="ReqresBackEndTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CourseProgectTesting" />
       <extension name="coverage">
         <pattern>
@@ -117,29 +135,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.OnlineTradeTest" />
-      <option name="METHOD_NAME" value="test3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReqresTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CourseProgectTesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresBackEndTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReqresTest.test7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReqresBackEndTest.delay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CourseProgectTesting" />
       <extension name="coverage">
         <pattern>
@@ -148,14 +150,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresTest" />
-      <option name="METHOD_NAME" value="test7" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresBackEndTest" />
+      <option name="METHOD_NAME" value="delay" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReqresTest.test9" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReqresBackEndTest.unknown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CourseProgectTesting" />
       <extension name="coverage">
         <pattern>
@@ -164,14 +166,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresTest" />
-      <option name="METHOD_NAME" value="test9" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresBackEndTest" />
+      <option name="METHOD_NAME" value="unknown" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="YandexTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReqresBackEndTest.unknownGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CourseProgectTesting" />
       <extension name="coverage">
         <pattern>
@@ -180,19 +182,36 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.YandexTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresBackEndTest" />
+      <option name="METHOD_NAME" value="unknownGet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReqresBackEndTest.unknownGetFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CourseProgectTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresBackEndTest" />
+      <option name="METHOD_NAME" value="unknownGetFail" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ReqresTest.test9" />
-        <item itemvalue="JUnit.ReqresTest" />
-        <item itemvalue="JUnit.ReqresTest.test7" />
-        <item itemvalue="JUnit.YandexTest" />
-        <item itemvalue="JUnit.OnlineTradeTest.test3" />
+        <item itemvalue="JUnit.ReqresBackEndTest.delay" />
+        <item itemvalue="JUnit.ReqresBackEndTest" />
+        <item itemvalue="JUnit.ReqresBackEndTest.unknownGet" />
+        <item itemvalue="JUnit.ReqresBackEndTest.unknownGetFail" />
+        <item itemvalue="JUnit.ReqresBackEndTest.unknown" />
       </list>
     </recent_temporary>
   </component>
@@ -204,8 +223,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
       </set>
     </attachedChunks>
   </component>
@@ -237,6 +256,7 @@
       <workItem from="1716882021611" duration="5251000" />
       <workItem from="1716908745166" duration="10435000" />
       <workItem from="1716920557565" duration="808000" />
+      <workItem from="1716991645635" duration="14602000" />
     </task>
     <servers />
   </component>
