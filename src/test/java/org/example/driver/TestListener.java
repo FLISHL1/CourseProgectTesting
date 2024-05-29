@@ -39,7 +39,7 @@ public class TestListener implements TestWatcher {
             throw new RuntimeException(e);
         }
 
-//        driver.quit();
+        driver.quit();
 //        Runtime.getRuntime().exec("taskkill /F /IM ChromeDriver.exe");
 
     }

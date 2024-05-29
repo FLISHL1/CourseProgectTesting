@@ -28,9 +28,9 @@ public abstract class DriverSetup {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
 //        Указать путь к папке с профилем <вставить свой по примеру>
-        options.addArguments("--user-data-dir=C:\\Users\\konop\\AppData\\Local\\Google\\Chrome\\User Data\\");
+        options.addArguments("--user-data-dir=C:\\Users\\Кирилл\\AppData\\Local\\Google\\Chrome\\User Data\\");
 //        И указать название профиля (конечную папку) по ссылке chrome://version
-        options.addArguments("--profile-directory=Profile 1");
+        options.addArguments("--profile-directory=Profile 2");
 //        options.addArguments("headless");
         driver = new EventFiringDecorator(new CustomEvent()).decorate(new ChromeDriver(options));
 
