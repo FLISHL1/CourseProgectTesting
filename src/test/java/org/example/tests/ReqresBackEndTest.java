@@ -259,8 +259,8 @@ public class ReqresBackEndTest  {
     @Epic("Test API /api/register")
     public void userRegister(){
         User user = User.builder()
-                .email("kirill15022005@gmail.com")
-                .password("15022005")
+                .email("eve.holt@reqres.in")
+                .password("pistol")
                 .build();
         UserRegister userRegister = given()
                 .contentType(ContentType.JSON)
@@ -282,7 +282,7 @@ public class ReqresBackEndTest  {
     @Epic("Test API /api/register с ошибкой")
     public void userRegisterError(){
         User user = User.builder()
-                .email("kirill15022005@gmail.com")
+                .email("eve.holt@reqres.in")
                 .build();
         String message = given()
                 .contentType(ContentType.JSON)
@@ -304,8 +304,8 @@ public class ReqresBackEndTest  {
     @Epic("Test API /api/login")
     public void userLogin(){
         User user = User.builder()
-                .email("kirill15022005@gmail.com")
-                .password("15022005")
+                .email("eve.holt@reqres.in")
+                .password("pistol")
                 .build();
         UserLogin userLogin = given()
                 .contentType(ContentType.JSON)
@@ -326,7 +326,7 @@ public class ReqresBackEndTest  {
     @Epic("Test API /api/login")
     public void userLoginError(){
         User user = User.builder()
-                .email("kirill15022005@gmail.com")
+                .email("eve.holt@reqres.in")
                 .build();
         String message = (String) given()
                 .contentType(ContentType.JSON)

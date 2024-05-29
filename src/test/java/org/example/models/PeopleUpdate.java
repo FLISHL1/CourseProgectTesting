@@ -8,5 +8,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PeopleUpdate extends People{
-    private String updateAt;
+    private String updatedAt;
 }

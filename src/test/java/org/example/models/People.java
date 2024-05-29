@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class People {
-    private String name;
-    private String job;
+    String name;
+    String job;
 }
