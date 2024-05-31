@@ -4,7 +4,6 @@ package org.example.tests;
 import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.assertj.core.api.Assertions;
 import org.example.models.*;
@@ -12,6 +11,8 @@ import org.example.driver.ConfProperties;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.TimeUnit;
 
@@ -19,15 +20,15 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
 @Feature("Тесты REST API reqres")
-public class ReqresBackEndTest  {
-
+public class ReqresBackEndTest {
+    private static final Logger logger = LoggerFactory.getLogger(User.class);
 
     @Step("Инициализация страницы")
     @BeforeEach
-    public void init(){
+    public void init() {
         RestAssured.reset();
         RestAssured.baseURI = ConfProperties.getProperties("reqres");
-
+        logger.info("Init uri");
     }
 
     @Test
@@ -35,7 +36,7 @@ public class ReqresBackEndTest  {
     @Owner(value = "Конопский Кирилл")
     @DisplayName("Провекра эндпоинта /api/users?page=2")
     @Epic("Test API /api/users?page=2 ")
-    public void userFromPage(){
+    public void userFromPage() {
         UserFromPage userFromPage =
                 given()
                         .when()
@@ -48,11 +49,11 @@ public class ReqresBackEndTest  {
                         .statusCode(200)
                         .extract()
                         .as(UserFromPage.class);
+        logger.info("Get url success");
         Assertions.assertThat(userFromPage.getPage()).isEqualTo(2);
         Assertions.assertThat(userFromPage.getPer_page()).isEqualTo(6);
         Assertions.assertThat(userFromPage.getTotal()).isEqualTo(12);
         Assertions.assertThat(userFromPage.getTotalPages()).isEqualTo(2);
-
     }
 
     @Test
@@ -60,7 +61,7 @@ public class ReqresBackEndTest  {
     @Owner(value = "Конопский Кирилл")
     @DisplayName("Провекра эндпоинта /api/users/2")
     @Epic("Test API /api/users/2 ")
-    public void userGet(){
+    public void userGet() {
         UserData userData =
                 given()
                         .when()
@@ -71,7 +72,7 @@ public class ReqresBackEndTest  {
                         .extract()
                         .response()
                         .getBody().jsonPath().getObject("data", UserData.class);
-
+        logger.info("Get url success");
         Assertions.assertThat(userData.getId()).isEqualTo(2);
         Assertions.assertThat(userData.getEmail()).isEqualTo("janet.weaver@reqres.in");
         Assertions.assertThat(userData.getFirstName()).isEqualTo("Janet");
@@ -84,15 +85,16 @@ public class ReqresBackEndTest  {
     @Owner(value = "Конопский Кирилл")
     @DisplayName("Провекра эндпоинта /api/users/22")
     @Epic("Test API /api/users/22 ")
-    public void userGetFail(){
+    public void userGetFail() {
         Response response = given()
-                        .when()
-                        .get("api/users/22")
-                        .then()
-                        .log().all()
-                        .statusCode(404)
-                        .extract()
+                .when()
+                .get("api/users/22")
+                .then()
+                .log().all()
+                .statusCode(404)
+                .extract()
                 .response();
+        logger.info("Get url success");
         Assertions.assertThat(response.asString()).isEqualTo("{}");
 
     }
@@ -102,7 +104,7 @@ public class ReqresBackEndTest  {
     @Owner(value = "Конопский Кирилл")
     @DisplayName("Провекра эндпоинта /api/unknown")
     @Epic("Test API /api/unknown")
-    public void unknown(){
+    public void unknown() {
         ColorFromPage colorFromPage =
                 given()
                         .when()
@@ -115,6 +117,7 @@ public class ReqresBackEndTest  {
                         .body("data.year", hasItem(2002))
                         .extract()
                         .as(ColorFromPage.class);
+        logger.info("Get url success");
         Assertions.assertThat(colorFromPage.getPage()).isEqualTo(1);
         Assertions.assertThat(colorFromPage.getPer_page()).isEqualTo(6);
         Assertions.assertThat(colorFromPage.getTotal()).isEqualTo(12);
@@ -126,7 +129,7 @@ public class ReqresBackEndTest  {
     @Owner(value = "Конопский Кирилл")
     @DisplayName("Провекра эндпоинта /api/unknown/2")
     @Epic("Test API /api/unknown/2")
-    public void unknownGet(){
+    public void unknownGet() {
         ColorData colorData =
                 given()
                         .when()
@@ -137,7 +140,7 @@ public class ReqresBackEndTest  {
                         .extract()
                         .response()
                         .getBody().jsonPath().getObject("data", ColorData.class);
-
+        logger.info("Get url success");
         Assertions.assertThat(colorData.getId()).isEqualTo(2);
         Assertions.assertThat(colorData.getName()).isEqualTo("fuchsia rose");
         Assertions.assertThat(colorData.getYear()).isEqualTo(2001);
@@ -150,7 +153,7 @@ public class ReqresBackEndTest  {
     @Owner(value = "Конопский Кирилл")
     @DisplayName("Провекра эндпоинта /api/unknown/23")
     @Epic("Test API /api/unknown/23 ")
-    public void unknownGetFail(){
+    public void unknownGetFail() {
         Response response = given()
                 .when()
                 .get("api/unknown/23")
@@ -159,6 +162,7 @@ public class ReqresBackEndTest  {
                 .statusCode(404)
                 .extract()
                 .response();
+        logger.info("Get url success");
         Assertions.assertThat(response.asString()).isEqualTo("{}");
     }
 
@@ -167,7 +171,7 @@ public class ReqresBackEndTest  {
     @Owner(value = "Конопский Кирилл")
     @DisplayName("Провекра эндпоинта создание пользвателя /api/users/2 post")
     @Epic("Test API /api/users post")
-    public void userCreate(){
+    public void userCreate() {
         People people = People.builder()
                 .name("Kirill")
                 .job("Programming")
@@ -182,10 +186,9 @@ public class ReqresBackEndTest  {
                 .statusCode(201)
                 .extract()
                 .as(PeopleCreate.class);
-        Assertions.assertThat(peopleCreate.getName())
-                .isEqualTo(people.getName());
-        Assertions.assertThat(peopleCreate.getJob())
-                .isEqualTo(people.getJob());
+        logger.info("Get url success");
+        Assertions.assertThat(peopleCreate.getName()).isEqualTo(people.getName());
+        Assertions.assertThat(peopleCreate.getJob()).isEqualTo(people.getJob());
     }
 
     @Test
@@ -193,7 +196,7 @@ public class ReqresBackEndTest  {
     @Owner(value = "Конопский Кирилл")
     @DisplayName("Провекра эндпоинта обновление пользвателя /api/users/2 put")
     @Epic("Test API /api/users put")
-    public void userUpdate(){
+    public void userUpdate() {
         People people = People.builder()
                 .name("Kirill")
                 .job("Programming")
@@ -207,6 +210,7 @@ public class ReqresBackEndTest  {
                 .statusCode(200)
                 .extract()
                 .as(PeopleUpdate.class);
+        logger.info("Get url success");
         Assertions.assertThat(peopleUpdate.getName()).isEqualTo(people.getName());
         Assertions.assertThat(peopleUpdate.getJob()).isEqualTo(people.getJob());
     }
@@ -216,7 +220,7 @@ public class ReqresBackEndTest  {
     @Owner(value = "Конопский Кирилл")
     @DisplayName("Провекра эндпоинта обновление пользвателя /api/users/2 patch")
     @Epic("Test API /api/users patch")
-    public void userUpdatePatch(){
+    public void userUpdatePatch() {
         People people = People.builder()
                 .name("Kirill")
                 .job("Programming")
@@ -230,6 +234,7 @@ public class ReqresBackEndTest  {
                 .statusCode(200)
                 .extract()
                 .as(PeopleUpdate.class);
+        logger.info("Get url success");
         Assertions.assertThat(peopleUpdate.getName()).isEqualTo(people.getName());
         Assertions.assertThat(peopleUpdate.getJob()).isEqualTo(people.getJob());
     }
@@ -239,7 +244,7 @@ public class ReqresBackEndTest  {
     @Owner(value = "Конопский Кирилл")
     @DisplayName("Провекра эндпоинта /api/users/2 delete")
     @Epic("Test API /api/users/2 ")
-    public void userDelete(){
+    public void userDelete() {
         Response response = given()
                 .when()
                 .delete("api/users/2")
@@ -248,6 +253,7 @@ public class ReqresBackEndTest  {
                 .statusCode(204)
                 .extract()
                 .response();
+        logger.info("Get url success");
         Assertions.assertThat(response.asString()).isEqualTo("");
     }
 
@@ -257,7 +263,7 @@ public class ReqresBackEndTest  {
     @Owner(value = "Конопский Кирилл")
     @DisplayName("Провекра эндпоинта регистрации пользвателя /api/register")
     @Epic("Test API /api/register")
-    public void userRegister(){
+    public void userRegister() {
         User user = User.builder()
                 .email("eve.holt@reqres.in")
                 .password("pistol")
@@ -273,6 +279,8 @@ public class ReqresBackEndTest  {
                 .body("token", not(hasItem(nullValue())))
                 .extract()
                 .as(UserRegister.class);
+        logger.info("Get url success");
+
     }
 
     @Test
@@ -280,7 +288,7 @@ public class ReqresBackEndTest  {
     @Owner(value = "Конопский Кирилл")
     @DisplayName("Провекра эндпоинта регистрации пользвателя /api/register с ошибкой")
     @Epic("Test API /api/register с ошибкой")
-    public void userRegisterError(){
+    public void userRegisterError() {
         User user = User.builder()
                 .email("eve.holt@reqres.in")
                 .build();
@@ -293,6 +301,7 @@ public class ReqresBackEndTest  {
                 .statusCode(400)
                 .extract()
                 .response().jsonPath().get("error");
+        logger.info("Get url success");
         Assertions.assertThat(message).isEqualTo("Missing password");
     }
 
@@ -302,7 +311,7 @@ public class ReqresBackEndTest  {
     @Owner(value = "Конопский Кирилл")
     @DisplayName("Провекра эндпоинта авторизации пользвателя /api/login")
     @Epic("Test API /api/login")
-    public void userLogin(){
+    public void userLogin() {
         User user = User.builder()
                 .email("eve.holt@reqres.in")
                 .password("pistol")
@@ -317,6 +326,8 @@ public class ReqresBackEndTest  {
                 .body("token", not(hasItem(nullValue())))
                 .extract()
                 .as(UserLogin.class);
+        logger.info("Get url success");
+
     }
 
     @Test
@@ -324,7 +335,7 @@ public class ReqresBackEndTest  {
     @Owner(value = "Конопский Кирилл")
     @DisplayName("Провекра эндпоинта авторизации пользвателя /api/login с ошибкой")
     @Epic("Test API /api/login")
-    public void userLoginError(){
+    public void userLoginError() {
         User user = User.builder()
                 .email("eve.holt@reqres.in")
                 .build();
@@ -337,6 +348,7 @@ public class ReqresBackEndTest  {
                 .statusCode(400)
                 .extract()
                 .response().jsonPath().get("error");
+        logger.info("Get url success");
         Assertions.assertThat(message).isEqualTo("Missing password");
 
     }
@@ -347,7 +359,7 @@ public class ReqresBackEndTest  {
     @Owner(value = "Конопский Кирилл")
     @DisplayName("Провекра эндпоинта задержки /api/users?delay=3")
     @Epic("Test API /api/users?delay=3")
-    public void delay(){
+    public void delay() {
         Long time = given()
                 .when()
                 .get("api/users?delay=3")
@@ -355,6 +367,7 @@ public class ReqresBackEndTest  {
                 .statusCode(200)
                 .extract()
                 .timeIn(TimeUnit.SECONDS);
+        logger.info("Get url success");
         Assertions.assertThat(time).isBetween(3L, 4L);
     }
 }
