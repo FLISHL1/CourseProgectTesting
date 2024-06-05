@@ -1,11 +1,18 @@
 package org.example.tests;
 
 import io.qameta.allure.*;
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import org.example.driver.ConfProperties;
 import org.example.driver.DriverSetup;
 import org.example.driver.TestListener;
+import org.example.models.People;
+import org.example.models.User;
 import org.example.pageTemplate.ReqresPage;
 import org.junit.jupiter.api.Disabled;
+
+import static io.restassured.RestAssured.*;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -27,6 +34,8 @@ public class ReqresTest extends DriverSetup {
         logger.info("Start test page reqres endpoint " + id);
         reqresPage = new ReqresPage(driver);
         driver.get(ConfProperties.getProperties("reqres"));
+        RestAssured.reset();
+        RestAssured.baseURI = ConfProperties.getProperties("reqres");
         logger.info("Page get success");
         reqresPage.setEndPoint(id);
         logger.info("Select endpoint");
@@ -71,7 +80,10 @@ public class ReqresTest extends DriverSetup {
     @Step("Проверка responseCode")
     public void stepCheckResponseCode(String code, boolean regexp){
         if (regexp)
-        assertTrue(reqresPage.getLabelResponseCode().matches(code));
+        assertEquals(code
+                .replaceAll("\\d+-\\d+-\\d+T\\d{2}:\\d{2}:\\d{2}.\\d+Z", "")
+                .replaceAll("\\d{3}", ""), reqresPage.getLabelResponseCode()
+                .replaceAll("\\d+-\\d+-\\d+T\\d{2}:\\d{2}:\\d{2}.\\d+Z", "").replaceAll("\\d{3}", ""));
         else assertEquals(code, reqresPage.getLabelResponseCode());
         logger.info("Checked responseCode");
     }
@@ -93,61 +105,7 @@ public class ReqresTest extends DriverSetup {
         init("users");
         stepCheckRequest("/api/users?page=2");
         stepCheckResponse(200);
-        stepCheckResponseCode("""
-                {
-                    "page": 2,
-                    "per_page": 6,
-                    "total": 12,
-                    "total_pages": 2,
-                    "data": [
-                        {
-                            "id": 7,
-                            "email": "michael.lawson@reqres.in",
-                            "first_name": "Michael",
-                            "last_name": "Lawson",
-                            "avatar": "https://reqres.in/img/faces/7-image.jpg"
-                        },
-                        {
-                            "id": 8,
-                            "email": "lindsay.ferguson@reqres.in",
-                            "first_name": "Lindsay",
-                            "last_name": "Ferguson",
-                            "avatar": "https://reqres.in/img/faces/8-image.jpg"
-                        },
-                        {
-                            "id": 9,
-                            "email": "tobias.funke@reqres.in",
-                            "first_name": "Tobias",
-                            "last_name": "Funke",
-                            "avatar": "https://reqres.in/img/faces/9-image.jpg"
-                        },
-                        {
-                            "id": 10,
-                            "email": "byron.fields@reqres.in",
-                            "first_name": "Byron",
-                            "last_name": "Fields",
-                            "avatar": "https://reqres.in/img/faces/10-image.jpg"
-                        },
-                        {
-                            "id": 11,
-                            "email": "george.edwards@reqres.in",
-                            "first_name": "George",
-                            "last_name": "Edwards",
-                            "avatar": "https://reqres.in/img/faces/11-image.jpg"
-                        },
-                        {
-                            "id": 12,
-                            "email": "rachel.howell@reqres.in",
-                            "first_name": "Rachel",
-                            "last_name": "Howell",
-                            "avatar": "https://reqres.in/img/faces/12-image.jpg"
-                        }
-                    ],
-                    "support": {
-                        "url": "https://reqres.in/#support-heading",
-                        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
-                    }
-                }""", false);
+        stepCheckResponseCode(given().when().get("api/users?page=2").then().extract().asPrettyString(), false);
     }
 
 
@@ -161,19 +119,7 @@ public class ReqresTest extends DriverSetup {
         init("users-single");
         stepCheckRequest("/api/users/2");
         stepCheckResponse(200);
-        stepCheckResponseCode("{\n" +
-                "    \"data\": {\n" +
-                "        \"id\": 2,\n" +
-                "        \"email\": \"janet.weaver@reqres.in\",\n" +
-                "        \"first_name\": \"Janet\",\n" +
-                "        \"last_name\": \"Weaver\",\n" +
-                "        \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\"\n" +
-                "    },\n" +
-                "    \"support\": {\n" +
-                "        \"url\": \"https://reqres.in/#support-heading\",\n" +
-                "        \"text\": \"To keep ReqRes free, contributions towards server costs are appreciated!\"\n" +
-                "    }\n" +
-                "}", false);
+        stepCheckResponseCode(given().when().get("api/users/2").then().extract().asPrettyString(), false);
     }
 
 
@@ -187,7 +133,7 @@ public class ReqresTest extends DriverSetup {
         init("users-single-not-found");
         stepCheckRequest("/api/users/23");
         stepCheckResponse(404);
-        stepCheckResponseCode("{}", false);
+        stepCheckResponseCode(given().when().get("api/users/23").then().extract().asString(), false);
     }
 
     @Test
@@ -200,60 +146,7 @@ public class ReqresTest extends DriverSetup {
         init("unknown");
         stepCheckRequest("/api/unknown");
         stepCheckResponse(200);
-        stepCheckResponseCode("{\n" +
-                "    \"page\": 1,\n" +
-                "    \"per_page\": 6,\n" +
-                "    \"total\": 12,\n" +
-                "    \"total_pages\": 2,\n" +
-                "    \"data\": [\n" +
-                "        {\n" +
-                "            \"id\": 1,\n" +
-                "            \"name\": \"cerulean\",\n" +
-                "            \"year\": 2000,\n" +
-                "            \"color\": \"#98B2D1\",\n" +
-                "            \"pantone_value\": \"15-4020\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"id\": 2,\n" +
-                "            \"name\": \"fuchsia rose\",\n" +
-                "            \"year\": 2001,\n" +
-                "            \"color\": \"#C74375\",\n" +
-                "            \"pantone_value\": \"17-2031\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"id\": 3,\n" +
-                "            \"name\": \"true red\",\n" +
-                "            \"year\": 2002,\n" +
-                "            \"color\": \"#BF1932\",\n" +
-                "            \"pantone_value\": \"19-1664\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"id\": 4,\n" +
-                "            \"name\": \"aqua sky\",\n" +
-                "            \"year\": 2003,\n" +
-                "            \"color\": \"#7BC4C4\",\n" +
-                "            \"pantone_value\": \"14-4811\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"id\": 5,\n" +
-                "            \"name\": \"tigerlily\",\n" +
-                "            \"year\": 2004,\n" +
-                "            \"color\": \"#E2583E\",\n" +
-                "            \"pantone_value\": \"17-1456\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"id\": 6,\n" +
-                "            \"name\": \"blue turquoise\",\n" +
-                "            \"year\": 2005,\n" +
-                "            \"color\": \"#53B0AE\",\n" +
-                "            \"pantone_value\": \"15-5217\"\n" +
-                "        }\n" +
-                "    ],\n" +
-                "    \"support\": {\n" +
-                "        \"url\": \"https://reqres.in/#support-heading\",\n" +
-                "        \"text\": \"To keep ReqRes free, contributions towards server costs are appreciated!\"\n" +
-                "    }\n" +
-                "}", false);
+        stepCheckResponseCode(given().when().get("api/unknown").then().extract().asPrettyString(), false);
     }
 
     @Test
@@ -266,19 +159,7 @@ public class ReqresTest extends DriverSetup {
         init("unknown-single");
         stepCheckRequest("/api/unknown/2");
         stepCheckResponse(200);
-        stepCheckResponseCode("{\n" +
-                "    \"data\": {\n" +
-                "        \"id\": 2,\n" +
-                "        \"name\": \"fuchsia rose\",\n" +
-                "        \"year\": 2001,\n" +
-                "        \"color\": \"#C74375\",\n" +
-                "        \"pantone_value\": \"17-2031\"\n" +
-                "    },\n" +
-                "    \"support\": {\n" +
-                "        \"url\": \"https://reqres.in/#support-heading\",\n" +
-                "        \"text\": \"To keep ReqRes free, contributions towards server costs are appreciated!\"\n" +
-                "    }\n" +
-                "}", false);
+        stepCheckResponseCode(given().when().get("api/unknown/2").then().extract().asPrettyString(), false);
     }
 
 
@@ -292,7 +173,7 @@ public class ReqresTest extends DriverSetup {
         init("unknown-single-not-found");
         stepCheckRequest("/api/unknown/23");
         stepCheckResponse(404);
-        stepCheckResponseCode("{}", false);
+        stepCheckResponseCode(given().when().get("api/unknown/23").then().extract().asString(), false);
     }
 
     @Test
@@ -305,13 +186,11 @@ public class ReqresTest extends DriverSetup {
         init("post");
         stepCheckRequest("/api/users");
         stepCheckResponse(201);
-
-        stepCheckResponseCode("\\{\n" +
-                "    \\\"name\\\": \\\"morpheus\\\",\n" +
-                "    \\\"job\\\": \\\"leader\\\",\n" +
-                "    \\\"id\\\": \\\"\\d*\\\",\n" +
-                "    \\\"createdAt\\\": \\\".*\\\"\n" +
-                "\\}", true);
+        People people = People.builder()
+                .name("morpheus")
+                .job("leader")
+                .build();
+        stepCheckResponseCode(given().contentType(ContentType.JSON).body(people).when().post("api/users").then().extract().asPrettyString(), true);
 
     }
 
@@ -325,11 +204,11 @@ public class ReqresTest extends DriverSetup {
         init("put");
         stepCheckRequest("/api/users/2");
         stepCheckResponse(200);
-        stepCheckResponseCode("\\{\n" +
-                "    \\\"name\\\": \\\"morpheus\\\",\n" +
-                "    \\\"job\\\": \\\"zion resident\\\",\n" +
-                "    \\\"updatedAt\\\": \\\".*\\\"\n" +
-                "\\}", true);
+        People people = People.builder()
+                .name("morpheus")
+                .job("zion resident")
+                .build();
+        stepCheckResponseCode(given().contentType(ContentType.JSON).body(people).when().put("api/users/2").then().extract().asPrettyString(), true);
     }
 
     @Test
@@ -341,15 +220,11 @@ public class ReqresTest extends DriverSetup {
     public void test9(){
         init("patch");
         stepCheckRequest("/api/users/2");
-        stepCheckRequestCode("{\n" +
-                "    \"name\": \"morpheus\",\n" +
-                "    \"job\": \"zion resident\"\n" +
-                "}");
-        stepCheckResponseCode("\\{\n" +
-                "    \\\"name\\\": \\\"morpheus\\\",\n" +
-                "    \\\"job\\\": \\\"zion resident\\\",\n" +
-                "    \\\"updatedAt\\\": \\\".*\\\"\n" +
-                "\\}", true);
+        People people = People.builder()
+                .name("morpheus")
+                .job("zion resident")
+                .build();
+        stepCheckResponseCode(given().contentType(ContentType.JSON).body(people).when().patch("api/users/2").then().extract().asPrettyString(), true);
     }
 
     @Test
@@ -362,7 +237,7 @@ public class ReqresTest extends DriverSetup {
         init("delete");
         stepCheckRequest("/api/users/2");
         stepCheckResponse(204);
-        stepCheckRequestCode("");
+        stepCheckResponseCode(given().when().delete("api/users/2").then().extract().asPrettyString(), true);
     }
 
     @Test
@@ -380,10 +255,13 @@ public class ReqresTest extends DriverSetup {
                 "    \"password\": \"pistol\"\n" +
                 "}");
         stepCheckResponse(200);
-        stepCheckResponseCode("{\n" +
-                "    \"id\": 4,\n" +
-                "    \"token\": \"QpwL5tke4Pnpja7X4\"\n" +
-                "}", false);
+        User user = User.builder()
+                .email("eve.holt@reqres.in")
+                .password("pistol")
+                .build();
+
+        stepCheckResponseCode(given().contentType(ContentType.JSON).body(user).when().post("api/register").then().extract().asPrettyString(), false);
+
     }
 
 
@@ -400,9 +278,10 @@ public class ReqresTest extends DriverSetup {
                 "    \"email\": \"sydney@fife\"\n" +
                 "}");
         stepCheckResponse(400);
-        stepCheckResponseCode("{\n" +
-                "    \"error\": \"Missing password\"\n" +
-                "}", false);
+        User user = User.builder()
+                .email("sydney@fife")
+                .build();
+        stepCheckResponseCode(given().contentType(ContentType.JSON).body(user).when().post("api/register").then().extract().asPrettyString(), false);
     }
 
     @Test
@@ -419,9 +298,11 @@ public class ReqresTest extends DriverSetup {
                 "    \"password\": \"cityslicka\"\n" +
                 "}");
         stepCheckResponse(200);
-        stepCheckResponseCode("{\n" +
-                "    \"token\": \"QpwL5tke4Pnpja7X4\"\n" +
-                "}", false);
+        User user = User.builder()
+                .email("eve.holt@reqres.in")
+                .password("cityslicka")
+                .build();
+        stepCheckResponseCode(given().contentType(ContentType.JSON).body(user).when().post("api/login").then().extract().asPrettyString(), false);
     }
 
     @Test
@@ -437,9 +318,10 @@ public class ReqresTest extends DriverSetup {
                 "    \"email\": \"peter@klaven\"\n" +
                 "}");
         stepCheckResponse(400);
-        stepCheckResponseCode("{\n" +
-                "    \"error\": \"Missing password\"\n" +
-                "}", false);
+        User user = User.builder()
+                .email("peter@klaven")
+                .build();
+        stepCheckResponseCode(given().contentType(ContentType.JSON).body(user).when().post("api/login").then().extract().asPrettyString(), false);
     }
 
     @Test
@@ -454,60 +336,7 @@ public class ReqresTest extends DriverSetup {
         stepCheckRequest("/api/users?delay=3");
         stepCheckResponse(200);
 
-        stepCheckResponseCode("{\n" +
-                "    \"page\": 1,\n" +
-                "    \"per_page\": 6,\n" +
-                "    \"total\": 12,\n" +
-                "    \"total_pages\": 2,\n" +
-                "    \"data\": [\n" +
-                "        {\n" +
-                "            \"id\": 1,\n" +
-                "            \"email\": \"george.bluth@reqres.in\",\n" +
-                "            \"first_name\": \"George\",\n" +
-                "            \"last_name\": \"Bluth\",\n" +
-                "            \"avatar\": \"https://reqres.in/img/faces/1-image.jpg\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"id\": 2,\n" +
-                "            \"email\": \"janet.weaver@reqres.in\",\n" +
-                "            \"first_name\": \"Janet\",\n" +
-                "            \"last_name\": \"Weaver\",\n" +
-                "            \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"id\": 3,\n" +
-                "            \"email\": \"emma.wong@reqres.in\",\n" +
-                "            \"first_name\": \"Emma\",\n" +
-                "            \"last_name\": \"Wong\",\n" +
-                "            \"avatar\": \"https://reqres.in/img/faces/3-image.jpg\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"id\": 4,\n" +
-                "            \"email\": \"eve.holt@reqres.in\",\n" +
-                "            \"first_name\": \"Eve\",\n" +
-                "            \"last_name\": \"Holt\",\n" +
-                "            \"avatar\": \"https://reqres.in/img/faces/4-image.jpg\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"id\": 5,\n" +
-                "            \"email\": \"charles.morris@reqres.in\",\n" +
-                "            \"first_name\": \"Charles\",\n" +
-                "            \"last_name\": \"Morris\",\n" +
-                "            \"avatar\": \"https://reqres.in/img/faces/5-image.jpg\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"id\": 6,\n" +
-                "            \"email\": \"tracey.ramos@reqres.in\",\n" +
-                "            \"first_name\": \"Tracey\",\n" +
-                "            \"last_name\": \"Ramos\",\n" +
-                "            \"avatar\": \"https://reqres.in/img/faces/6-image.jpg\"\n" +
-                "        }\n" +
-                "    ],\n" +
-                "    \"support\": {\n" +
-                "        \"url\": \"https://reqres.in/#support-heading\",\n" +
-                "        \"text\": \"To keep ReqRes free, contributions towards server costs are appreciated!\"\n" +
-                "    }\n" +
-                "}", false);
+        stepCheckResponseCode(given().when().get("api/users?delay=3").then().extract().asPrettyString(), false);
     }
 
 

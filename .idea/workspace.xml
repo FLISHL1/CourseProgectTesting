@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae791595-5175-41ff-acda-0c0e07d914e4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/jsonSchema/color-data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/jsonSchema/color-from-page.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/jsonSchema/error.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/jsonSchema/login.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/jsonSchema/register-success.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/jsonSchema/user-create.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/jsonSchema/user-data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/jsonSchema/user-from-page.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/jsonSchema/user-update.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/models/People.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/models/People.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/models/PeopleUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/models/PeopleUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/driver/DriverSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/driver/DriverSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/ReqresBackEndTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/ReqresBackEndTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/ReqresTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/ReqresTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,58 +61,66 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.LambdaTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LambdaTest.test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MosPolytechTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OnlineTradeTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OnlineTradeTest.test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OnlineTradeTest.test3.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresBackEndTest.delay.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresBackEndTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresBackEndTest.test1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresBackEndTest.test2.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresBackEndTest.unknown.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresBackEndTest.unknownGet.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresBackEndTest.unknownGetFail.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresBackEndTest.userFromPage.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresBackEndTest.userGet.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresBackEndTest.userGetFail.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresBackEndTest.userRegister.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresTest.test1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresTest.test2.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresTest.test3.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresTest.test5.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresTest.test7.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReqresTest.test9.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.YandexTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.CourseProgectTesting [clean,verify].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.CourseProgectTesting [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.CourseProgectTesting [io.qameta.allure:allure-maven:2.9:serve].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.CourseProgectTesting [org.apache.maven.plugins:maven-surefire-plugin:3.2.3:test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.CourseProgectTesting [verify].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/konop/Desktop/Университет/4 семестр/Курсач/CourseProgectTesting&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Кирилл/Desktop/Университет/4 семестр/Курсач/CourseProgectTest/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.39313984&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.LambdaTest.executor": "Run",
+    "JUnit.LambdaTest.test.executor": "Run",
+    "JUnit.MosPolytechTest.executor": "Run",
+    "JUnit.OnlineTradeTest.executor": "Run",
+    "JUnit.OnlineTradeTest.test.executor": "Run",
+    "JUnit.OnlineTradeTest.test3.executor": "Run",
+    "JUnit.ReqresBackEndTest.delay.executor": "Run",
+    "JUnit.ReqresBackEndTest.executor": "Run",
+    "JUnit.ReqresBackEndTest.test1.executor": "Run",
+    "JUnit.ReqresBackEndTest.test2.executor": "Run",
+    "JUnit.ReqresBackEndTest.unknown.executor": "Run",
+    "JUnit.ReqresBackEndTest.unknownGet.executor": "Run",
+    "JUnit.ReqresBackEndTest.unknownGetFail.executor": "Run",
+    "JUnit.ReqresBackEndTest.userCreate.executor": "Run",
+    "JUnit.ReqresBackEndTest.userFromPage.executor": "Run",
+    "JUnit.ReqresBackEndTest.userGet.executor": "Run",
+    "JUnit.ReqresBackEndTest.userGetFail.executor": "Run",
+    "JUnit.ReqresBackEndTest.userRegister.executor": "Run",
+    "JUnit.ReqresBackEndTest.userUpdate.executor": "Run",
+    "JUnit.ReqresBackEndTest.userUpdatePatch.executor": "Run",
+    "JUnit.ReqresTest.executor": "Run",
+    "JUnit.ReqresTest.test1.executor": "Run",
+    "JUnit.ReqresTest.test11.executor": "Run",
+    "JUnit.ReqresTest.test2.executor": "Run",
+    "JUnit.ReqresTest.test3.executor": "Run",
+    "JUnit.ReqresTest.test5.executor": "Run",
+    "JUnit.ReqresTest.test7.executor": "Run",
+    "JUnit.ReqresTest.test9.executor": "Run",
+    "JUnit.YandexTest.executor": "Run",
+    "Maven.CourseProgectTesting [clean,verify].executor": "Run",
+    "Maven.CourseProgectTesting [clean].executor": "Run",
+    "Maven.CourseProgectTesting [io.qameta.allure:allure-maven:2.9:serve].executor": "Run",
+    "Maven.CourseProgectTesting [org.apache.maven.plugins:maven-surefire-plugin:3.2.3:test].executor": "Run",
+    "Maven.CourseProgectTesting [verify].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last.edited.regexp": "Sample Text\nlfdgfgdf",
+    "last_opened_file_path": "C:/Users/konop/Desktop/Университет/4 семестр/Курсач/CourseProgectTesting/src/test/resources/jsonSchema",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/Кирилл/Desktop/Университет/4 семестр/Курсач/CourseProgectTest/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.39313984",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\konop\Desktop\Университет\4 семестр\Курсач\CourseProgectTesting\src\test\resources\jsonSchema" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.example" />
     </key>
@@ -118,8 +134,8 @@
       <command value="mvn clean verify" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.YandexTest">
-    <configuration name="ReqresBackEndTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ReqresTest.test12">
+    <configuration name="ReqresTest.test12" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CourseProgectTesting" />
       <extension name="coverage">
         <pattern>
@@ -128,29 +144,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresBackEndTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReqresBackEndTest.delay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CourseProgectTesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresBackEndTest" />
-      <option name="METHOD_NAME" value="delay" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresTest" />
+      <option name="METHOD_NAME" value="test12" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReqresBackEndTest.unknownGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReqresTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CourseProgectTesting" />
       <extension name="coverage">
         <pattern>
@@ -159,14 +160,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresBackEndTest" />
-      <option name="METHOD_NAME" value="unknownGet" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresTest" />
+      <option name="METHOD_NAME" value="test3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReqresBackEndTest.userRegister" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReqresTest.test6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CourseProgectTesting" />
       <extension name="coverage">
         <pattern>
@@ -175,14 +176,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresBackEndTest" />
-      <option name="METHOD_NAME" value="userRegister" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresTest" />
+      <option name="METHOD_NAME" value="test6" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="YandexTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReqresTest.test8" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CourseProgectTesting" />
       <extension name="coverage">
         <pattern>
@@ -191,19 +192,36 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.YandexTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresTest" />
+      <option name="METHOD_NAME" value="test8" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReqresTest.test9" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CourseProgectTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.ReqresTest" />
+      <option name="METHOD_NAME" value="test9" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.YandexTest" />
-        <item itemvalue="JUnit.ReqresBackEndTest" />
-        <item itemvalue="JUnit.ReqresBackEndTest.userRegister" />
-        <item itemvalue="JUnit.ReqresBackEndTest.delay" />
-        <item itemvalue="JUnit.ReqresBackEndTest.unknownGet" />
+        <item itemvalue="JUnit.ReqresTest.test12" />
+        <item itemvalue="JUnit.ReqresTest.test3" />
+        <item itemvalue="JUnit.ReqresTest.test6" />
+        <item itemvalue="JUnit.ReqresTest.test9" />
+        <item itemvalue="JUnit.ReqresTest.test8" />
       </list>
     </recent_temporary>
   </component>
@@ -215,8 +233,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
       </set>
     </attachedChunks>
   </component>
@@ -251,6 +269,9 @@
       <workItem from="1716991645635" duration="14602000" />
       <workItem from="1717006592797" duration="1009000" />
       <workItem from="1717007618163" duration="365000" />
+      <workItem from="1717019967269" duration="19000" />
+      <workItem from="1717090063601" duration="242000" />
+      <workItem from="1717574748145" duration="9265000" />
     </task>
     <servers />
   </component>
@@ -263,6 +284,22 @@
     <option featureType="dependencySupport" implementationName="executable:kubectl" />
     <option featureType="dependencySupport" implementationName="java:io.qameta.allure:allure-java-commons" />
     <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/tests/ReqresBackEndTest.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/tests/ReqresBackEndTest.java</url>
+          <line>197</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

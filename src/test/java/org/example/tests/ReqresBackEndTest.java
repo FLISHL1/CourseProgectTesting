@@ -1,9 +1,12 @@
 package org.example.tests;
 
 
+import com.github.fge.jsonschema.cfg.ValidationConfiguration;
+import com.github.fge.jsonschema.main.JsonSchemaFactory;
 import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import org.assertj.core.api.Assertions;
 import org.example.models.*;
@@ -16,7 +19,10 @@ import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.TimeUnit;
 
+import static com.github.fge.jsonschema.SchemaVersion.DRAFTV4;
 import static io.restassured.RestAssured.*;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static io.restassured.module.jsv.JsonSchemaValidatorSettings.settings;
 import static org.hamcrest.Matchers.*;
 
 @Feature("Тесты REST API reqres")
@@ -28,6 +34,19 @@ public class ReqresBackEndTest {
     public void init() {
         RestAssured.reset();
         RestAssured.baseURI = ConfProperties.getProperties("reqres");
+        // Given
+        JsonSchemaValidator.settings = settings()
+                .with()
+                .jsonSchemaFactory(
+                        JsonSchemaFactory
+                                .newBuilder()
+                                .setValidationConfiguration(ValidationConfiguration
+                                        .newBuilder()
+                                        .setDefaultVersion(DRAFTV4)
+                                        .freeze())
+                                .freeze()).
+                and().with().checkedValidation(false);
+
         logger.info("Init uri");
     }
 
@@ -43,6 +62,7 @@ public class ReqresBackEndTest {
                         .get("api/users?page=2")
                         .then()
                         .log().all()
+                        .body(matchesJsonSchemaInClasspath("jsonSchema/user-from-page.json"))
                         .body("data.id", not(hasItem(nullValue())))
                         .body("data.first_name", hasItem("Tobias"))
                         .body("data.last_name", hasItem("Funke"))
@@ -69,6 +89,7 @@ public class ReqresBackEndTest {
                         .then()
                         .log().all()
                         .statusCode(200)
+                        .body(matchesJsonSchemaInClasspath("jsonSchema/user-data.json"))
                         .extract()
                         .response()
                         .getBody().jsonPath().getObject("data", UserData.class);
@@ -112,6 +133,7 @@ public class ReqresBackEndTest {
                         .then()
                         .log().all()
                         .statusCode(200)
+                        .body(matchesJsonSchemaInClasspath("jsonSchema/color-from-page.json"))
                         .body("data.id", not(hasItem(nullValue())))
                         .body("data.name", hasItem("true red"))
                         .body("data.year", hasItem(2002))
@@ -137,6 +159,7 @@ public class ReqresBackEndTest {
                         .then()
                         .log().all()
                         .statusCode(200)
+                        .body(matchesJsonSchemaInClasspath("jsonSchema/color-data.json"))
                         .extract()
                         .response()
                         .getBody().jsonPath().getObject("data", ColorData.class);
@@ -184,6 +207,7 @@ public class ReqresBackEndTest {
                 .then()
                 .log().all()
                 .statusCode(201)
+                .body(matchesJsonSchemaInClasspath("jsonSchema/user-create.json"))
                 .extract()
                 .as(PeopleCreate.class);
         logger.info("Get url success");
@@ -208,6 +232,7 @@ public class ReqresBackEndTest {
                 .put("api/users/2")
                 .then()
                 .statusCode(200)
+                .body(matchesJsonSchemaInClasspath("jsonSchema/user-update.json"))
                 .extract()
                 .as(PeopleUpdate.class);
         logger.info("Get url success");
@@ -232,6 +257,7 @@ public class ReqresBackEndTest {
                 .patch("api/users/2")
                 .then()
                 .statusCode(200)
+                .body(matchesJsonSchemaInClasspath("jsonSchema/user-update.json"))
                 .extract()
                 .as(PeopleUpdate.class);
         logger.info("Get url success");
@@ -275,6 +301,7 @@ public class ReqresBackEndTest {
                 .post("api/register")
                 .then()
                 .statusCode(200)
+                .body(matchesJsonSchemaInClasspath("jsonSchema/register-success.json"))
                 .body("id", not(hasItem(nullValue())))
                 .body("token", not(hasItem(nullValue())))
                 .extract()
@@ -299,6 +326,7 @@ public class ReqresBackEndTest {
                 .post("api/register")
                 .then()
                 .statusCode(400)
+                .body(matchesJsonSchemaInClasspath("jsonSchema/error.json"))
                 .extract()
                 .response().jsonPath().get("error");
         logger.info("Get url success");
@@ -323,6 +351,7 @@ public class ReqresBackEndTest {
                 .post("api/login")
                 .then()
                 .statusCode(200)
+                .body(matchesJsonSchemaInClasspath("jsonSchema/login.json"))
                 .body("token", not(hasItem(nullValue())))
                 .extract()
                 .as(UserLogin.class);
@@ -346,6 +375,7 @@ public class ReqresBackEndTest {
                 .post("api/login")
                 .then()
                 .statusCode(400)
+                .body(matchesJsonSchemaInClasspath("jsonSchema/error.json"))
                 .extract()
                 .response().jsonPath().get("error");
         logger.info("Get url success");
@@ -365,6 +395,7 @@ public class ReqresBackEndTest {
                 .get("api/users?delay=3")
                 .then()
                 .statusCode(200)
+                .body(matchesJsonSchemaInClasspath("jsonSchema/user-from-page.json"))
                 .extract()
                 .timeIn(TimeUnit.SECONDS);
         logger.info("Get url success");
